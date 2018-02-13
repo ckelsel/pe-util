@@ -4,6 +4,15 @@ It uses the [pe-parse library][2] to read the PE structure.
 
 2016, Georg Sauthoff <mail@georg.so>
 
+## Build
+
+### build and install mman
+git clone https://github.com/witwall/mman-win32.git/
+
+### patch
+vim parser-library/CMakeLists.txt
+target_link_libraries(pe-parser-library mman)
+
 ## Examples
 
 Create a [portable executable (PE)][1] via cross-compiling
